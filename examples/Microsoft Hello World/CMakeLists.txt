@@ -25,5 +25,5 @@ add_executable(hello_server ${server_sources} ${server_headers} ${idl_server} ${
 add_executable(hello_client ${client_sources} ${client_headers} ${idl_client} ${idl_header})
 target_include_directories(hello_server PUBLIC ${idl_incDir})
 target_include_directories(hello_client PUBLIC ${idl_incDir})
-target_link_libraries(hello_server "rpcrt4.lib" "oldnames.lib" "wsock32.lib")
-target_link_libraries(hello_client "rpcrt4.lib" "oldnames.lib" "wsock32.lib")
+target_link_libraries(hello_server "rpcrt4.lib")
+target_link_libraries(hello_client "rpcrt4.lib")
